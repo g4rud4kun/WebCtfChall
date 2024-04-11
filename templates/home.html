@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovely Gojo</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="start">
+            <p class="Heading">Welcome to the G0J0's World🤞</p>
+            <p class="Line1">Yameteeeee Kudasaiiiiiiiii</p>
+        </div>
+
+        <div class="Modal">
+            <p class="Line2">Lemme show you a magic</p>
+            <form action="{% url 'moshi' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="command1" placeholder="Enter a number">
+                <br>
+                <input type="text" name="command2" placeholder="Enter an another number">
+                <br>
+                <button type="submit">Push Me!!!</button>
+            </form>
+        </div>
+        <p class="End">Hint for the Flag</p>
+        <a class="Link"  href="https://youtu.be/dQw4w9WgXcQ?si=vRJzJRfk7RmTvm-g">Flag</a>
+    </div>
+</body>
+</html>
