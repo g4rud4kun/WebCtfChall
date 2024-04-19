@@ -10,7 +10,7 @@ def moshi(request):
         if command1:
             if any(c.isalpha() for c in command1):
                 return render(request, 'baakaa.html', {'output1': f'"{command1}" Not allowed in the command'})
-            elif any(c in ['. ' , ' ' , '<.' , '<~'] for c in command1):
+            elif any(c in ['. ' , ' ' , '<.' , '<~', '???-','{','}'] for c in command1):
                 return render(request, 'baakaa.html', {'output1': f'"{command1}" Hehe not allowed'})
             elif command1.isdecimal():
                 output1 = int(command1)*2
